@@ -5,13 +5,10 @@ module "ec2" {
     ami = "ami-0bb84b8ffd87024d8"
     instance_type = "t2.micro"
     sg = [module.sg.security_group_id]
-
 }
 
-
-
 module "sg" {
-  source = "github.com/mmmyro711/terraform-session//modules/sg?ref=v1.0.0"
+  source = "github.com/mmmyro711/terraform-session//modules/sg?ref=v1.0.1"
   //source = "https://github.com/mmmyro711/terraform-session/tree/main/modules/sg" -  remove /tree/main
 
   env = "dev"
